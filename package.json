@@ -1,0 +1,15 @@
+{
+  "name": "estudio-sass-desafio-latam",
+  "version": "1.0.0",
+  "description": "En esta clase vimos la materia referente a Sass. El profesor enseño dos formas de instalar sass. Una primera instalación que ayuda a trabajar proyectos pequeños o para estudiar y una segunda forma que es la forma profesional de como hoy día se trabaja en el mercado.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  }
+}

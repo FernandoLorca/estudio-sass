@@ -1,6 +1,6 @@
 # Estudio sass desafío latam
 
-En esta clase vimos la materia referente a Sass. El profesor enseño dos formas de instalar sass. Una primera instalación que ayuda a trabajr proyectos pequeños o para estudiar y una segunda forma que es la forma profesional de como hoy día se trabaja en el mercado.
+En esta clase vimos la materia referente a Sass. El profesor enseño dos formas de instalar sass. Una primera instalación que ayuda a trabajar proyectos pequeños o para estudiar y una segunda forma que es la forma profesional de como hoy día se trabaja en el mercado.
 
 ### Ventajas de usar css
 
@@ -44,7 +44,7 @@ body {
 
 ## Maps
 
-Los maps son parecidos a los objetos en Js. Se usan para almacenar datos con una key y un valor. Los maps se inician con _()_.
+Los maps son parecidos a los objetos en Js. Se usan para almacenar datos con una key y un valor. Los maps se inician con `()`.
 
 ```
 $font-weight: (
@@ -77,7 +77,7 @@ El ejercicio de hacer nesting es el de poder encapsular elementos html, clases o
 }
 ```
 
-Para no repetir muchas veces el _.main_ podemos abreviar al padre utilizando un _&_.
+Para no repetir muchas veces el `.main` podemos abreviar al padre utilizando un `&`.
 
 ```
 .main {
@@ -99,7 +99,7 @@ Compila:
 }
 ```
 
-En este caso en particular al colocar el ampersand, el css compila sólo la clase y no la define dentro del padre .main, para esto debemos uitilizar algo llamado interpolación, _#{&}_
+En este caso en particular al colocar el ampersand, el css compila sólo la clase y no la define dentro del padre .main, para esto debemos uitilizar algo llamado interpolación, `#{&}`.
 
 ```
 .main {
@@ -124,7 +124,7 @@ Compila:
 ## @import o partials
 
 Podemos separar nuestro código en distintos archivos e importarlos desde otro archivo css.
-Los archivos css que usaremos como partials se deben escribir con un guión bajo: "\__resets.scss_". Así le decimos a sass que este archivo es un partial y así no generará un nuevo archivo css.
+Los archivos css que usaremos como partials se deben escribir con un guión bajo: `_resets.scss`. Así le decimos a sass que este archivo es un partial y así no generará un nuevo archivo css.
 Para traer cualquier archivo que se haya hecho en archivos a parte debemos anteponer @import.
 
 ```
@@ -134,7 +134,7 @@ Para traer cualquier archivo que se haya hecho en archivos a parte debemos antep
 
 ## Funciones
 
-Las funciones de sass son parecidas a las de Js. Se definen con _@function_, se les agrega un nombre y un argumento. Se deben retornar con un _@return_.
+Las funciones de sass son parecidas a las de Js. Se definen con `@function`, se les agrega un nombre y un argumento. Se deben retornar con un `@return`.
 
 ```
 @function weight($weight-name) {
@@ -184,7 +184,7 @@ El mixin es una habilidad de sass para reutilizar código. Son muy parecidos a l
 }
 ```
 
-En este ejemplo se agrega el mixin con nombre _flexCenter_, se agrega un argumento que define la dirección del flex (row o column) y dentro del main se llama al mixin con _@include_ y se agrega el argumento.
+En este ejemplo se agrega el mixin con nombre `flexCenter`, se agrega un argumento que define la dirección del flex (row o column) y dentro del main se llama al mixin con `@include` y se agrega el argumento.
 
 En sass podemos utilizar metodos como en Js, por ejemplo, podemos utilizar la declaración if:
 
@@ -205,7 +205,7 @@ Se crea el mixin y se agrega un argumento por defecto (Como en Js) y en la clase
 
 ## @extends o extensiones
 
-Es una forma de reutilizar código. Podemos utilizar _@extend_ para heredar el código de alguna clase en específico y no tener que repetirlo.
+Es una forma de reutilizar código. Podemos utilizar `@extend` para heredar el código de alguna clase en específico y no tener que repetirlo.
 
 ```
 .main {
@@ -254,3 +254,49 @@ Con Sass podemos realizar el mismo calculo matemático pero sin la necesidad de 
 Aquí termina la documentación creada por tutorial y comienza documentación respecto a clase de desafío Latam
 
 ---
+
+# Sass desafío Latam
+
+## Creación de documento de seguimiento de paquetes
+
+Con npm nosotros podemos instalar una inmensidad de paquetes pre configurados que podemos usar en nuestros proyectos.
+
+Es necesario entender de que en nuestros proyectos nosotros vamos a ir instalando distintos paquetes y es ideal que podamos ir registrando todos estos paquetes en nuestro proyecto. Por esto es necesario abrir la terminal y correr un comando npm para que se cree un archivo de reqgistro de paquetes.
+
+Comando:
+
+```
+npm init -y
+```
+
+El comando "init" crea el archivo .json que llva el seguimiento de los paquetes y la bandera -y indica que debe cree el archivo con la configuración por defecto.
+
+Si nosotros descargamos un proyecto de un tercero debemos correr un comando npm para que este lea todas las dependencias que aparecen en el archivo .json y las descargue y así poder trabar con todas las tecnologias usadas en el proyecto descargado.
+
+Comando:
+
+```
+npm i
+```
+
+## Instalación de Bootstrap con npm
+
+Con el comando npm vamos a instalar bootstrap desde la terminal y se crearan los archivos respectivos en la carpeta `node_modules`
+
+Comando:
+
+```
+npm i bootstrap
+```
+
+La `i` representa install.
+
+## Archivo gitignore
+
+La carpeta `node_modules` es una carpeta con la que se trabaja de manera local y esta no pasa a producción ni se sube a github. Por esto que al momento en que se crea la carpeta y se comienzas a instlar dependencias es necesario crear el archivo `.gitignore` y dentro se declara que la carpeta `node_modules` no sea leida por git.
+
+Crear archivo:
+
+```
+.gitignore
+```
