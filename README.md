@@ -300,3 +300,41 @@ Crear archivo:
 ```
 .gitignore
 ```
+
+## Instalación de Sass con npm
+
+Instalamos sass con el comando y la banderita final `-D` (D en mayúscula) indica que esta dependencia es sólo para desarollo.
+
+```
+npm i sass -D
+```
+
+### Crear script para que "vea" los cambios en sass y los convierta a .css
+
+Para que sass valla viendo lo que vamos haciendo y creando los cambios en el archivo `.css` es necesario crear un script en el archivo `.json` indicando dónde esta nuestro archivo .scss y dónde queremos que se cree nuestra carpeta y archivos .css.
+
+Script en archivo .json:
+
+```
+  "scripts": {
+    "dev": "sass sass/custom.scss css/custom.css"
+  },
+```
+
+Para ejecutar el script y que corra lo que le indicamos debemos usar el comando en la terminal.
+
+Comando:
+
+```
+npm run dev
+```
+
+Para que la terminal quede a la "escucha" de los cambios de sass a css debiesemos estar corriendo `npm run dev` cada vez que queremos que se actualicen los datos. Para evitar esto podemos utilizar la bandera `--watch`.
+
+Como debiese quedar el script en el .json:
+
+```
+  "scripts": {
+    "dev": "sass --watch sass/custom.scss css/custom.css"
+  },
+```
